@@ -11,16 +11,11 @@ namespace MagmaCore
 {
     public class Main : MagmaMod
     {
-        public override void OnPostSceneWasLoaded(int buildIndex, string sceneName)
+        public override void OnFirstMainMenuLoad()
         {
-            base.OnPostSceneWasLoaded(buildIndex, sceneName);
-
-            if (sceneName == "MainMenu")
+            foreach (CustomCharacter character in CustomCharacter.CustomCharacters)
             {
-                foreach (CustomCharacter character in CustomCharacter.CustomCharacters)
-                {
-                    character.Convert();
-                }
+                character.Convert();
             }
         }
     }
