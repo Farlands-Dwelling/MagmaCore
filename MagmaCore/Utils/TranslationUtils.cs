@@ -12,7 +12,6 @@ namespace MagmaCore.Utils
         //add language eventually
         public static void CreateTranslation(string key, string value)
         {
-            MelonLogger.Msg(value);
             if (!Main.LangTerms.ContainsKey(key))
             {
                 Main.LangTerms.Add(key, value);

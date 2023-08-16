@@ -14,7 +14,7 @@ namespace MagmaCore.Patches
     {
         static bool Prefix(ref Player __instance)
         {
-            __instance.characterProperties.AddRange(CustomCharacter.Characters);
+            __instance.characterProperties.AddRange(Main.Characters);
             return true;
         }
     }

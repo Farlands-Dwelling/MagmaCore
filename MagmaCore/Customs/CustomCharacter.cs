@@ -1,4 +1,5 @@
-﻿using MagmaCore.Utils;
+﻿using MagmaCore.Datatypes;
+using MagmaCore.Utils;
 using MelonLoader;
 using System;
 using System.Collections;
@@ -18,17 +19,19 @@ using UnityEngine.UI;
 using static Character;
 using static Item2;
 using static MagmaCore.Customs.CustomCharacter;
+using static MelonLoader.Modules.MelonModule;
 
 namespace MagmaCore.Customs
 {
     public abstract class CustomCharacter
     {
-        public static List<CustomCharacter> CustomCharacters = new List<CustomCharacter>();
-
-        public static List<Character> Characters = new List<Character>();
+        public static Dictionary<int, CustomCharacter> CustomCharacters = new Dictionary<int, CustomCharacter>();
+        public static Dictionary<KeyValuePair<string, string>, CustomCharacter> CustomCharactersByModName = new Dictionary<KeyValuePair<string, string>, CustomCharacter>();
+        public static List<MonoBehaviour> CharacterManagers = new List<MonoBehaviour>();
 
         public string ModID = "";
         public string ModName = "";
+        public int ID = 0;
         public Character CharacterInstance;
 
         public virtual string characterName { get; protected set; }
@@ -41,7 +44,8 @@ namespace MagmaCore.Customs
         //public virtual string characterNameKey { get; protected set; }
         //public virtual string characterDescriptionKey { get; protected set; }
 
-        public virtual List<GameObject> startingObjects { get; protected set; }
+        //public virtual List<GameObject> startingObjects { get; protected set; }
+        public virtual List<ModItemDefinition> startingItems { get; protected set; }
         public virtual List<GameObject> startingObjectsForLimitedItemGet { get; protected set; }
         //public virtual List<RuntimeAnimatorController> animatorControllers { get; protected set; }
         public virtual List<Skin> skins { get; protected set; }
@@ -61,6 +65,10 @@ namespace MagmaCore.Customs
         public virtual Vector2 endingBagSizeDemo { get; protected set; }
         public virtual List<LevelUp> levelUps { get; protected set; }
         public virtual List<ActionButtonManager.Type> buttonTypes { get; protected set; }
+        public virtual List<string> itemBlacklist { get; protected set; }
+        public virtual List<string> itemWhitelist { get; protected set; }
+        public virtual bool blacklistItemsAllowedForOneCharacter { get; protected set; } = true;
+        public virtual List<string> itemWhitelistUsingCharacter { get; protected set; }
 
         public void Convert()
         {
@@ -74,7 +82,6 @@ namespace MagmaCore.Customs
             if (characterName != null) result.name = characterName;
             if (startingHealth != 0) result.startingHealth = startingHealth;
             if (defaultEnergyPerTurn != 0) result.defaultEnergyPerTurn = defaultEnergyPerTurn;
-            if (startingObjects != null) result.startingObjects = startingObjects;
             if (startingObjectsForLimitedItemGet != null) result.startingObjectsForLimitedItemGet = startingObjectsForLimitedItemGet;
             if (characterSelectorSizeRatio != null) result.characterSelectorSizeRatio = characterSelectorSizeRatio;
             if (yAdjustment != null) result.yAdjustment = yAdjustment;
@@ -116,12 +123,12 @@ namespace MagmaCore.Customs
 
             CharacterInstance = result;
 
-            Characters.Add(result);
-
-
             if (skins != null) CreateAnimationOverrideController();
             CreateTranslations();
             CreateUIElements();
+            CreateItemBlacklist();
+
+            Modify(CharacterInstance);
         }
 
         public int GetHash()
@@ -131,17 +138,24 @@ namespace MagmaCore.Customs
 
         public static T RegisterCharacter<T>(T character) where T : CustomCharacter
         {
-            /*if (GDOs.ContainsKey(character.ID))
-            {
-                Main.LogInfo($"Error while registering custom GDO of type {character.GetType().FullName} with ID={character.ID} and Name=\"{character.ModName}:{character.UniqueNameID}\". Double-check to ensure that the UniqueNameID is actually unique. (Clashing with : {GDOs[character.ID]})");
-                return null;
-            }*/
+            if (character.ID == 0)
+                character.ID = character.GetHash();
 
-            CustomCharacters.Add(character);
+            if (CustomCharacters.ContainsKey(character.ID))
+            {
+                MelonLogger.Error($"Error while registering custom character \"{character.ModID}:{character.characterName}\". (Clashing with : {CustomCharacters[character.ID]})");
+                return null;
+            }
+
+            CustomCharacters.Add(character.ID, character);
+            CustomCharactersByModName.Add(new KeyValuePair<string, string>(character.ModName, character.characterName), character);
+
+            MelonLogger.Msg($"{character.ModName},{character.characterName}");
 
             return character;
         }
 
+        #region Create Methods
         private void CreateUIElements()
         {
             NewCharacterSelector characterSelection = Resources.FindObjectsOfTypeAll<NewCharacterSelector>()[0];
@@ -156,39 +170,18 @@ namespace MagmaCore.Customs
             iconButtonGameObject.transform.parent = characterSelection.transform.Find("Character Select Master/Character Select/Character Selection List");
 
             Image buttonCharacterIcon = iconButtonGameObject.transform.Find("GameObject").GetComponent<Image>();
-            buttonCharacterIcon.sprite = mapCharacterSprite[0];
+
+            if (mapCharacterSprite != null) buttonCharacterIcon.sprite = mapCharacterSprite[0];
 
             Button button = iconButtonGameObject.GetComponent<Button>();
 
             object persistentCalls = HarmonyLib.AccessTools.Field(typeof(UnityEventBase), "m_PersistentCalls").GetValue(button.onClick);
             MethodInfo registerPersistentListener = HarmonyLib.AccessTools.Method(HarmonyLib.AccessTools.TypeByName("PersistentCallGroup"), "RegisterObjectPersistentListener", new Type[] { typeof(int), typeof(UnityEngine.Object), typeof(Type), typeof(UnityEngine.Object), typeof(string) });
             registerPersistentListener.Invoke(persistentCalls, new object[] { 0, characterSelection, typeof(NewCharacterSelector), CharacterInstance, "ChooseCharacter" });
-            //button.onClick = new Button.ButtonClickedEvent();
-            //button.onClick.AddListener(delegate { characterSelection.ChooseCharacter(CharacterInstance); }); 
         }
 
         private void CreateAnimationOverrideController()
         {
-            /*IList<KeyValuePair<AnimationClip, AnimationClip>> overrides = new List<KeyValuePair<AnimationClip, AnimationClip>>();
-            foreach (AnimatorOverridePair pair in animatorControllers)
-            {
-                AnimatorOverrideController animatorOverrideControllerTemplate = GameObject.Instantiate(Resources.FindObjectsOfTypeAll<AnimatorOverrideController>().ToList().Find(x => x.name == "purse default"));
-                CharacterInstance.animatorControllers.Clear();
-
-                for (int i = 0; i < animatorOverrideControllerTemplate.clips.Length; i++)
-                {
-                    if (animatorOverrideControllerTemplate.clips[i].originalClip.name == pair.originalClipName)
-                    {
-                        overrides.Add(
-                            new KeyValuePair<AnimationClip, AnimationClip>(
-                                animatorOverrideControllerTemplate.clips[i].originalClip, 
-                                pair.overrideClip));
-                    }
-                }
-
-                animatorOverrideControllerTemplate.ApplyOverrides(overrides);
-                CharacterInstance.animatorControllers.Add(animatorOverrideControllerTemplate);
-            }*/
             CharacterInstance.animatorControllers.Clear();
 
             
@@ -200,19 +193,24 @@ namespace MagmaCore.Customs
 
                 IList<KeyValuePair<AnimationClip, AnimationClip>> overrides = new List<KeyValuePair<AnimationClip, AnimationClip>>();
 
-                foreach (AnimatorOverridePair pair in animOverride.animationOverrides)
+                for (int animOverrideIndex = 0; animOverrideIndex < animOverride.animationOverrides.Count; animOverrideIndex++)
                 {
-                    for (int i = 0; i < animatorOverrideController.clips.Length; i++)
+                    AnimatorOverridePair overridePair = animOverride.animationOverrides[animOverrideIndex];
+                    for (int originalClipIndex = 0; originalClipIndex < animatorOverrideController.clips.Length; originalClipIndex++)
                     {
-                        if (animatorOverrideController.clips[i].originalClip.name == pair.originalClipName)
+                        AnimationClip originalClip = animatorOverrideController.clips[originalClipIndex].originalClip;
+                        if (originalClip.name == overridePair.originalClipName)
                         {
                             // Copy animation events to prevent "lag", for example when using an item or attacking an enemy
-                            pair.overrideClip.events = animatorOverrideController.clips[i].originalClip.events;
+                            if (overridePair.overrideClip.length < originalClip.length && originalClip.events != null)
+                                MelonLogger.Error($"[{ModName}] The length of clip '{overridePair.overrideClip.name}' ({overridePair.overrideClip.length}) is less than the length of the original clip `{originalClip.name}` ({originalClip.length}). This will cause the animation events of this animation to not load properly.");
+
+                            overridePair.overrideClip.events = originalClip.events;
 
                             overrides.Add(
                                 new KeyValuePair<AnimationClip, AnimationClip>(
-                                    animatorOverrideController.clips[i].originalClip,
-                                    pair.overrideClip));
+                                    originalClip,
+                                    overridePair.overrideClip));
                         }
                     }
                 }
@@ -245,6 +243,61 @@ namespace MagmaCore.Customs
             }
         }
 
+        private void CreateItemBlacklist()
+        {
+            // TODO: Make use ItemUtils
+            // TODO: Refactor + add item pool list maybe? + make it happen after modded items load
+
+            Item2[] items = Resources.FindObjectsOfTypeAll<Item2>();
+
+            for (int i = 0; i < items.Length; i++)
+            {
+                Item2 item = items[i];
+                List<string> characterNames = new List<string>();
+                bool hasSoloBlacklistedCharacter = false;
+                bool itemIsBlacklisted = false;
+
+                foreach (CharacterName name in item.validForCharacters)
+                {
+                    characterNames.Add(name.ToString());
+                }
+
+                if (blacklistItemsAllowedForOneCharacter == true)
+                    hasSoloBlacklistedCharacter = item.validForCharacters.Count <= 1;
+                if (itemWhitelistUsingCharacter != null)
+                {
+                    if (characterNames.Intersect(itemWhitelistUsingCharacter).Any())
+                    {
+                        hasSoloBlacklistedCharacter = false;
+                    }
+                }
+                if (itemBlacklist != null)
+                {
+                    if (itemBlacklist.Contains(item.displayName))
+                    {
+                        itemIsBlacklisted = true;
+                    }
+                }
+                if (itemWhitelist != null)
+                {
+                    if (itemWhitelist.Contains(item.displayName))
+                    {
+                        itemIsBlacklisted = false;
+                    }
+                }
+
+                if (itemIsBlacklisted || hasSoloBlacklistedCharacter)
+                    continue;
+
+                item.validForCharacters.Add(CharacterInstance.characterName);
+            }
+        }
+
+        #endregion
+
+        public virtual void Modify(Character characterInstance) { }
+
+        // Probably move these two out of this class.
         public struct Skin
         {
             public List<AnimatorOverridePair> animationOverrides;
