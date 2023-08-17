@@ -70,5 +70,20 @@ namespace MagmaCore.Utils
 
             return newValue;
         } 
+
+        // Returns first matching item found
+        public static Item2 FindItemInInventory(Item2 itemToFind)
+        {
+            Item2 firstMatch = GameObject.FindObjectsOfType<Item2>().ToList().Find(x => Item2.GetDisplayName(x.name) == Item2.GetDisplayName(itemToFind.name) && !x.destroyed);
+
+            return firstMatch;
+        }
+
+        public static List<Item2> FindItemsInInventory(Item2 itemToFind)
+        {
+            List<Item2> matches = GameObject.FindObjectsOfType<Item2>().ToList().FindAll(x => Item2.GetDisplayName(x.name) == Item2.GetDisplayName(itemToFind.name) && !x.destroyed);
+
+            return matches;
+        }
     }
 }
