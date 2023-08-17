@@ -3,12 +3,14 @@ using MagmaCore.Patches;
 using MagmaCore.Utils;
 using MelonLoader;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 namespace MagmaCore
 {
@@ -26,10 +28,17 @@ namespace MagmaCore
 
         public sealed override void OnInitializeMelon()
         {
-            ModsFinishedLoadingPatch.OnLoadedMods += OnLoadedMods;
-            ModsFinishedLoadingPatch.OnLoadedMods += HandleDependencies;
+            //ModsFinishedLoadingPatch.OnLoadedMods += OnLoadedMods;
+            //ModsFinishedLoadingPatch.OnLoadedMods += HandleDependencies;
+            MelonCoroutines.Start(WaitUntilModsLoaded());
 
             OnInitializeMagma();
+        }
+
+        IEnumerator WaitUntilModsLoaded()
+        {
+            yield return new WaitUntil(() => ModLoader.main.dataReady);
+            OnLoadedMods();
         }
 
         public sealed override void OnSceneWasLoaded(int buildIndex, string sceneName)

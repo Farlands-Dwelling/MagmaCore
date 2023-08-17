@@ -8,4 +8,3 @@ Ideas
 
 Known Issues
 
-- Translations don't fully work/create effect text doesn't show up when spawning startingItems
