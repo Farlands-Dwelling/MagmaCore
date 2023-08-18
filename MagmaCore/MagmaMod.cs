@@ -37,6 +37,7 @@ namespace MagmaCore
 
         IEnumerator WaitUntilModsLoaded()
         {
+            yield return new WaitUntil(() => GameObject.FindObjectOfType<ModLoader>() != null);
             yield return new WaitUntil(() => ModLoader.main.dataReady);
             OnLoadedMods();
         }
