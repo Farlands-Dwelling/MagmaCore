@@ -128,7 +128,7 @@ namespace MagmaCore.Customs
             CreateUIElements();
             CreateItemBlacklist();
 
-            Modify(CharacterInstance);
+            Modify(ref CharacterInstance);
         }
 
         public int GetHash()
@@ -295,7 +295,7 @@ namespace MagmaCore.Customs
 
         #endregion
 
-        public virtual void Modify(Character characterInstance) { }
+        public virtual void Modify(ref Character characterInstance) { }
 
         // Probably move these two out of this class.
         public struct Skin
