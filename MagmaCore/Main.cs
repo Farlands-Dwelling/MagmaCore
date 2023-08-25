@@ -1,4 +1,5 @@
 ﻿using MagmaCore.Customs;
+using MagmaCore.ItemLoaderExtensions;
 using MelonLoader;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,12 @@ namespace MagmaCore
     {
         public static readonly List<Character> Characters = new List<Character>();
         public static readonly int ExtraItemFunctionNum = 555; //TODO: placeholder, should definitely find a better way than using numbers in jsons
+
+        public override void OnInitializeMagma()
+        {
+            AddItemLoaderExtension<ModItemTypeExtension>();
+        }
+
         public override void OnFirstMainMenuLoad()
         {
             foreach (CustomCharacter character in CustomCharacter.CustomCharacters.Values)

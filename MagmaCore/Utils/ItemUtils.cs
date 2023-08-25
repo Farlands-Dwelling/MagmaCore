@@ -69,7 +69,23 @@ namespace MagmaCore.Utils
             TranslationUtils.CreateTranslation(id.ToString(), name);
 
             return newValue;
-        } 
+        }
+
+        public static Item2.ItemType RegisterItemType(string name, string modName)
+        {
+            // TODO: Make work with any enum.
+
+            int id = StringUtils.GetInt32HashCode($"{modName}:{name}");
+
+            Item2.ItemType newValue = (Item2.ItemType)id;
+
+            CustomItemTypes.Add(id, newValue);
+            CustomItemTypesByModName.Add(new KeyValuePair<string, string>(modName, name), newValue);
+
+            TranslationUtils.CreateTranslation(id.ToString(), name);
+
+            return newValue;
+        }
 
         // Returns first matching item found
         public static Item2 FindItemInInventory(Item2 itemToFind)

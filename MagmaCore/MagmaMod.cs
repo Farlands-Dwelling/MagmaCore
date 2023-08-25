@@ -89,6 +89,13 @@ namespace MagmaCore
             return component;
         }
 
+        public T AddItemLoaderExtension<T>() where T : ItemLoaderExtension, new()
+        {
+            T extension = new T();
+            ItemLoaderExtension.Extensions.Add(extension);
+            return extension;
+        }
+
         // When main menu is opened, instantiate a popup that says what mods you need
         // For now it will say dependency missing, but when the ModLoader is added to the Main Menu scene, change it so it checks when main menu is loaded (and item mods are fully initalized)
         protected void HandleDependencies()
