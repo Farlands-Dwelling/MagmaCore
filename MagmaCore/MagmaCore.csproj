@@ -377,6 +377,8 @@
     <Compile Include="Patches\ContextMenuTypePatch.cs" />
     <Compile Include="Patches\LoadModItemPatch.cs" />
     <Compile Include="Patches\ModsFinishedLoadingPatch.cs" />
+    <Compile Include="Patches\SetCharacterFromNumberPatch.cs" />
+    <Compile Include="Patches\SetNumberFromCharacterPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Publicizer.cs" />
     <Compile Include="Utils\AssetUtils.cs" />
