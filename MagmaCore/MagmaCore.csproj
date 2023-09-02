@@ -41,6 +41,10 @@
     <Reference Include="com.fluid.unity-event-plus">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Backpack Hero\Backpack Hero_Data\Managed\com.fluid.unity-event-plus.dll</HintPath>
     </Reference>
+    <Reference Include="ES3Assembly, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Backpack Hero\Backpack Hero_Data\Managed\ES3Assembly.dll</HintPath>
+    </Reference>
     <Reference Include="MelonLoader, Version=0.5.7.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\libs\MelonLoader\MelonLoader.dll</HintPath>
@@ -365,7 +369,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customs\CustomBase.cs" />
     <Compile Include="Customs\CustomCharacter.cs" />
+    <Compile Include="Customs\CustomEvent.cs" />
+    <Compile Include="Customs\CustomSkin.cs" />
+    <Compile Include="Managers\MagmaManager.cs" />
     <Compile Include="Customs\ItemLoaderExtension.cs" />
     <Compile Include="Datatypes\ModItemDefinition.cs" />
     <Compile Include="Interfaces\IExtraItemFunction.cs" />
@@ -375,6 +383,7 @@
     <Compile Include="Patches\AddStartingObjectsPatch.cs" />
     <Compile Include="Patches\AddCharactersPatch.cs" />
     <Compile Include="Patches\ContextMenuTypePatch.cs" />
+    <Compile Include="Patches\FixBagSpritesPatch.cs" />
     <Compile Include="Patches\LoadModItemPatch.cs" />
     <Compile Include="Patches\ModsFinishedLoadingPatch.cs" />
     <Compile Include="Patches\SetCharacterFromNumberPatch.cs" />
@@ -383,6 +392,7 @@
     <Compile Include="Publicizer.cs" />
     <Compile Include="Utils\AssetUtils.cs" />
     <Compile Include="Utils\CharacterUtils.cs" />
+    <Compile Include="Utils\CustomUtils.cs" />
     <Compile Include="Utils\GameObjectUtils.cs" />
     <Compile Include="Utils\ItemLoaderUtils.cs" />
     <Compile Include="Utils\ItemUtils.cs" />

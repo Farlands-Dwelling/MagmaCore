@@ -27,7 +27,6 @@ namespace MagmaCore.Customs
     {
         public static Dictionary<int, CustomCharacter> CustomCharacters = new Dictionary<int, CustomCharacter>();
         public static Dictionary<KeyValuePair<string, string>, CustomCharacter> CustomCharactersByModName = new Dictionary<KeyValuePair<string, string>, CustomCharacter>();
-        public static List<MonoBehaviour> CharacterManagers = new List<MonoBehaviour>();
 
         public string ModID = "";
         public string ModName = "";

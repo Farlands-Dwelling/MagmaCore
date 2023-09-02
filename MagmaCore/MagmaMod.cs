@@ -16,6 +16,7 @@ namespace MagmaCore
 {
     public abstract class MagmaMod : MelonMod
     {
+        public abstract string InternalModName { get; }
         public virtual List<string> Dependencies { get; private set; } = new List<string>();
 
         public static Dictionary<string, string> LangTerms = new Dictionary<string, string>();
@@ -76,16 +77,25 @@ namespace MagmaCore
         public T AddCharacter<T>() where T : CustomCharacter, new()
         {
             T character = new T();
-            character.ModID = $"{Info.Author}.{Info.Name}"; //Probably not good long term, if mod author changes name of mod or author name, things will get messed up
+            character.ModID = InternalModName; // Kind of janky
             character.ModName = Info.Name;
 
             return CustomCharacter.RegisterCharacter(character);
         }
 
-        public T AddCharacterManager<T>() where T : MonoBehaviour, new()
+        public T AddCustom<T>() where T : CustomBase, new()
+        {
+            T custom = new T();
+            custom.ModID = InternalModName;
+            custom.ModName = Info.Name;
+
+            return CustomBase.RegisterCustom(custom);
+        }
+
+        public T AddManager<T>() where T : MonoBehaviour, new()
         {
             T component = new T();
-            CustomCharacter.CharacterManagers.Add(component);
+            Main.Managers.Add(component);
             return component;
         }
 
