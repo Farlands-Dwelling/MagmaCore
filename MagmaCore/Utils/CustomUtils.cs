@@ -37,5 +37,25 @@ namespace MagmaCore.Utils
         {
             return (T)GetCustom(modID, name);
         }
+
+
+        public static List<T> GetCustomsOfType<T>() where T : CustomBase
+        {
+            return CustomBase.Customs.Where(entry => entry.Value is T).Select(entry => entry.Value as T).ToList();
+        }
+        public static Dictionary<int, T> GetCustomsOfTypeWithID<T>() where T : CustomBase
+        {
+            return CustomBase.Customs.Where(entry => entry.Value is T).ToDictionary(x => x.Key, x => x.Value as T);
+        }
+
+        public static List<CustomBase> GetCustomsFromMod(string modID)
+        {
+            return CustomBase.CustomsByGUID.Where(entry => entry.Key.Key == modID).Select(entry => entry.Value).ToList();
+        }
+
+        public static List<T> GetCustomsFromMod<T>(string modID) where T : CustomBase
+        {
+            return CustomBase.CustomsByGUID.Where(entry => entry.Key.Key == modID && entry.Value is T).Select(entry => entry.Value).ToList() as List<T>;
+        }
     }
 }

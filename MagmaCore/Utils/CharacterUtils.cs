@@ -26,7 +26,8 @@ namespace MagmaCore.Utils
 
         public static CustomCharacter FindCustomCharacter(string characterName, string modName)
         {
-            return CustomCharacter.CustomCharactersByModName[new KeyValuePair<string, string>(modName, characterName)];
+            return CustomUtils.GetCastedCustom<CustomCharacter>(modName, characterName);
+                //CustomBase.CustomsByModName[new KeyValuePair<string, string>(modName, characterName)];
         }
 
         public static Character FindCharacter(string characterName, string modName)

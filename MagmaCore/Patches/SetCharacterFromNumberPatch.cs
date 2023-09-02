@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using MagmaCore.Customs;
+using MagmaCore.Utils;
 using MelonLoader;
 using System;
 using System.Collections.Generic;
@@ -41,11 +42,11 @@ namespace MagmaCore.Patches
             {
                 __instance.character = Character.CharacterName.Pochette;
             }
-            foreach (KeyValuePair<int, CustomCharacter> characterKvp in CustomCharacter.CustomCharacters)
+            foreach (KeyValuePair<int, CustomCharacter> characterKvp in CustomUtils.GetCustomsOfTypeWithID<CustomCharacter>())//CustomCharacter.CustomCharacters)
             {
-                int paddingAmount = Resources.FindObjectsOfTypeAll<Character>().Length - CustomCharacter.CustomCharacters.Count;
-                MelonLogger.Msg(Resources.FindObjectsOfTypeAll<Character>().Length - CustomCharacter.CustomCharacters.Count);
-                if (__instance.characterNumber == CustomCharacter.CustomCharacters.Values.ToList().IndexOf(characterKvp.Value) + paddingAmount)
+                int paddingAmount = Resources.FindObjectsOfTypeAll<Character>().Length - CustomUtils.GetCustomsOfType<CustomCharacter>().Count;
+                MelonLogger.Msg(Resources.FindObjectsOfTypeAll<Character>().Length - CustomUtils.GetCustomsOfType<CustomCharacter>().Count);
+                if (__instance.characterNumber == CustomUtils.GetCustomsOfTypeWithID<CustomCharacter>().Values.ToList().IndexOf(characterKvp.Value) + paddingAmount)
                 {
                     MelonLogger.Warning("Custom char detected: " + characterKvp.Value.characterName);
                     __instance.character = (Character.CharacterName)characterKvp.Key;

@@ -1,4 +1,5 @@
-﻿using MagmaCore.Datatypes;
+﻿using Harmony;
+using MagmaCore.Datatypes;
 using MagmaCore.Utils;
 using MelonLoader;
 using System;
@@ -23,14 +24,8 @@ using static MelonLoader.Modules.MelonModule;
 
 namespace MagmaCore.Customs
 {
-    public abstract class CustomCharacter
+    public abstract class CustomCharacter : CustomBase
     {
-        public static Dictionary<int, CustomCharacter> CustomCharacters = new Dictionary<int, CustomCharacter>();
-        public static Dictionary<KeyValuePair<string, string>, CustomCharacter> CustomCharactersByModName = new Dictionary<KeyValuePair<string, string>, CustomCharacter>();
-
-        public string ModID = "";
-        public string ModName = "";
-        public int ID = 0;
         public Character CharacterInstance;
 
         public virtual string characterName { get; protected set; }
@@ -47,7 +42,7 @@ namespace MagmaCore.Customs
         public virtual List<ModItemDefinition> startingItems { get; protected set; }
         public virtual List<GameObject> startingObjectsForLimitedItemGet { get; protected set; }
         //public virtual List<RuntimeAnimatorController> animatorControllers { get; protected set; }
-        public virtual List<Skin> skins { get; protected set; }
+        public virtual List<CustomSkin> skins { get; protected set; }
         public virtual List<float> characterSelectorSizeRatio { get; protected set; }
         public virtual List<float> yAdjustment { get; protected set; }
 
@@ -69,7 +64,7 @@ namespace MagmaCore.Customs
         public virtual bool blacklistItemsAllowedForOneCharacter { get; protected set; } = true;
         public virtual List<string> itemWhitelistUsingCharacter { get; protected set; }
 
-        public void Convert()
+        public override void Convert()
         {
             Character purse = Resources.FindObjectsOfTypeAll<Character>().ToList().Find(x => x.characterName == Character.CharacterName.Purse);
             Character result = ScriptableObject.Instantiate(purse);//ScriptableObject.CreateInstance<Character>();
@@ -122,36 +117,12 @@ namespace MagmaCore.Customs
 
             CharacterInstance = result;
 
-            if (skins != null) CreateAnimationOverrideController();
+            if (skins != null) AddSkins();
             CreateTranslations();
             CreateUIElements();
             CreateItemBlacklist();
 
             Modify(ref CharacterInstance);
-        }
-
-        public int GetHash()
-        {
-            return StringUtils.GetInt32HashCode($"{ModID}:{characterName}");
-        }
-
-        public static T RegisterCharacter<T>(T character) where T : CustomCharacter
-        {
-            if (character.ID == 0)
-                character.ID = character.GetHash();
-
-            if (CustomCharacters.ContainsKey(character.ID))
-            {
-                MelonLogger.Error($"Error while registering custom character \"{character.ModID}:{character.characterName}\". (Clashing with : {CustomCharacters[character.ID]})");
-                return null;
-            }
-
-            CustomCharacters.Add(character.ID, character);
-            CustomCharactersByModName.Add(new KeyValuePair<string, string>(character.ModName, character.characterName), character);
-
-            MelonLogger.Msg($"{character.ModName},{character.characterName}");
-
-            return character;
         }
 
         #region Create Methods
@@ -179,43 +150,13 @@ namespace MagmaCore.Customs
             registerPersistentListener.Invoke(persistentCalls, new object[] { 0, characterSelection, typeof(NewCharacterSelector), CharacterInstance, "ChooseCharacter" });
         }
 
-        private void CreateAnimationOverrideController()
+        private void AddSkins()
         {
             CharacterInstance.animatorControllers.Clear();
 
-            
-            foreach (Skin animOverride in skins)
+            foreach (CustomSkin skin in skins)
             {
-                RuntimeAnimatorController playerController = Resources.FindObjectsOfTypeAll<RuntimeAnimatorController>().ToList().Find(x => x.name == "Player Controller");
-                AnimatorOverrideController animatorOverrideController = new AnimatorOverrideController(playerController);
-                animatorOverrideController.runtimeAnimatorController = playerController;
-
-                IList<KeyValuePair<AnimationClip, AnimationClip>> overrides = new List<KeyValuePair<AnimationClip, AnimationClip>>();
-
-                for (int animOverrideIndex = 0; animOverrideIndex < animOverride.animationOverrides.Count; animOverrideIndex++)
-                {
-                    AnimatorOverridePair overridePair = animOverride.animationOverrides[animOverrideIndex];
-                    for (int originalClipIndex = 0; originalClipIndex < animatorOverrideController.clips.Length; originalClipIndex++)
-                    {
-                        AnimationClip originalClip = animatorOverrideController.clips[originalClipIndex].originalClip;
-                        if (originalClip.name == overridePair.originalClipName)
-                        {
-                            // Copy animation events to prevent "lag", for example when using an item or attacking an enemy
-                            if (overridePair.overrideClip.length < originalClip.length && originalClip.events != null)
-                                MelonLogger.Error($"[{ModName}] The length of clip '{overridePair.overrideClip.name}' ({overridePair.overrideClip.length}) is less than the length of the original clip `{originalClip.name}` ({originalClip.length}). This will cause the animation events of this animation to not load properly.");
-
-                            overridePair.overrideClip.events = originalClip.events;
-
-                            overrides.Add(
-                                new KeyValuePair<AnimationClip, AnimationClip>(
-                                    originalClip,
-                                    overridePair.overrideClip));
-                        }
-                    }
-                }
-
-                animatorOverrideController.ApplyOverrides(overrides);
-                CharacterInstance.animatorControllers.Add(animatorOverrideController);
+                CharacterInstance.animatorControllers.Add(skin.SkinInstance);
             }
         }
 
@@ -295,18 +236,6 @@ namespace MagmaCore.Customs
         #endregion
 
         public virtual void Modify(ref Character characterInstance) { }
-
-        // Probably move these two out of this class.
-        public struct Skin
-        {
-            public List<AnimatorOverridePair> animationOverrides;
-        }
-
-        public struct AnimatorOverridePair
-        {
-            public string originalClipName;
-            public AnimationClip overrideClip;
-        }
 
         private enum OriginalClips
         {

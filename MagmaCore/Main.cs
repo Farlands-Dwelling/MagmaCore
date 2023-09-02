@@ -28,11 +28,6 @@ namespace MagmaCore
 
         public override void OnFirstMainMenuLoad()
         {
-            foreach (CustomCharacter character in CustomCharacter.CustomCharacters.Values)
-            {
-                character.Convert();
-                Characters.Add(character.CharacterInstance);
-            }
             foreach (CustomBase custom in CustomBase.Customs.Values)
             {
                 custom.Convert();

@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using MagmaCore.Customs;
+using MagmaCore.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,12 @@ namespace MagmaCore.Patches
     {
         static bool Prefix(ref Player __instance)
         {
-            __instance.characterProperties.AddRange(Main.Characters);
+            List<Character> characterList = new List<Character>();
+            foreach (CustomCharacter character in CustomUtils.GetCustomsOfType<CustomCharacter>())//CustomCharacter.CustomCharacters.Values)
+            {
+                characterList.Add(character.CharacterInstance);
+            }
+            __instance.characterProperties.AddRange(characterList);
             return true;
         }
     }

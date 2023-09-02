@@ -18,7 +18,7 @@ namespace MagmaCore.Patches
     {
         static bool Prefix()
         {
-            foreach (CustomCharacter character in CustomCharacter.CustomCharacters.Values)
+            foreach (CustomCharacter character in CustomUtils.GetCustomsOfType<CustomCharacter>())// CustomCharacter.CustomCharacters.Values)
             {
                 if (character.startingItems == null)
                 {

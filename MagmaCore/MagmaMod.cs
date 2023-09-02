@@ -74,15 +74,6 @@ namespace MagmaCore
 
         public virtual void OnPostSceneWasLoaded(int buildIndex, string sceneName) { }
 
-        public T AddCharacter<T>() where T : CustomCharacter, new()
-        {
-            T character = new T();
-            character.ModID = InternalModName; // Kind of janky
-            character.ModName = Info.Name;
-
-            return CustomCharacter.RegisterCharacter(character);
-        }
-
         public T AddCustom<T>() where T : CustomBase, new()
         {
             T custom = new T();
@@ -92,6 +83,11 @@ namespace MagmaCore
             return CustomBase.RegisterCustom(custom);
         }
 
+        /// <summary>
+        /// Adds the specified class as a component on the GameManager during a run.
+        /// </summary>
+        /// <typeparamref name="T">The component to add to the GameManager.</typeparamref>
+        /// <returns>Instance of newly created component</returns>
         public T AddManager<T>() where T : MonoBehaviour, new()
         {
             T component = new T();
