@@ -42,6 +42,11 @@ namespace MagmaCore.Patches
             {
                 __instance.character = Character.CharacterName.Pochette;
             }
+            if (CustomUtils.GetCustomsOfTypeWithID<CustomCharacter>() == null)
+            {
+                MelonLogger.Warning("No custom characters detected.");
+                return false;
+            }
             foreach (KeyValuePair<int, CustomCharacter> characterKvp in CustomUtils.GetCustomsOfTypeWithID<CustomCharacter>())//CustomCharacter.CustomCharacters)
             {
                 int paddingAmount = Resources.FindObjectsOfTypeAll<Character>().Length - CustomUtils.GetCustomsOfType<CustomCharacter>().Count;

@@ -236,22 +236,5 @@ namespace MagmaCore.Customs
         #endregion
 
         public virtual void Modify(ref Character characterInstance) { }
-
-        private enum OriginalClips
-        {
-            Player_Attack,
-            Player_Hurt,
-            Player_Run,
-            Player_Die,
-            Player_UseItem,
-            Player_ReadMap,
-            Player_Win,
-            Player_Block,
-            Player_Attack_Overhead,
-            Player_WalkAway,
-            Player_FireArrow,
-            Player_SearchPack,
-            Player_Command
-        }
     }
 }
