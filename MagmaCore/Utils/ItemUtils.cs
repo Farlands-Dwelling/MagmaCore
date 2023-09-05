@@ -66,7 +66,7 @@ namespace MagmaCore.Utils
             CustomItemTypes.Add(id, newValue);
             CustomItemTypesByModName.Add(new KeyValuePair<string, string>(modInfo.Name, name), newValue);
 
-            TranslationUtils.CreateTranslation(id.ToString(), name);
+            TranslationUtils.CreateTranslation("english", id.ToString(), name);
 
             return newValue;
         }
@@ -82,7 +82,7 @@ namespace MagmaCore.Utils
             CustomItemTypes.Add(id, newValue);
             CustomItemTypesByModName.Add(new KeyValuePair<string, string>(modName, name), newValue);
 
-            TranslationUtils.CreateTranslation(id.ToString(), name);
+            TranslationUtils.CreateTranslation("english", id.ToString(), name);
 
             return newValue;
         }
