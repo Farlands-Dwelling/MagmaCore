@@ -31,6 +31,7 @@ namespace MagmaCore.Managers
             yield return new WaitForFixedUpdate();
 
             ModularBackpack.SetAllBackpackSprites();
+            FindObjectOfType<LevelUpManager>().ResizeAllBackpacks();
         }
     }
 }
