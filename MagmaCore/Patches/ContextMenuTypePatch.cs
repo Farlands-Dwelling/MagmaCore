@@ -13,12 +13,9 @@ namespace MagmaCore.Patches
     {
         static void Postfix(ref ContextMenuManager __instance, ContextMenuButton.Type type, List<Item2.Cost> costs, Item2.PlayerAnimation playerAnimation)
         {
-            if (type == (ContextMenuButton.Type)Main.ExtraItemFunctionNum)
-            {
-                __instance.selectedItem.GetComponent<IExtraItemFunction>().Event(__instance);
+            __instance.selectedItem.GetComponent<IExtraItemFunction>().Event(__instance, type);
 
-                return;
-            }
+            return;
         }
     }
 }

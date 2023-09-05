@@ -11,6 +11,6 @@ namespace MagmaCore.Interfaces
     {
         /// <param name="sender">The original method patched to invoke this function. Usually a class ending with "Manager".</param>
         /// <returns>The child GameObject, if found. Otherwise null.</returns>
-        void Event(MonoBehaviour sender);
+        void Event(MonoBehaviour sender, Enum enumType);
     }
 }
