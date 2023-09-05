@@ -158,21 +158,21 @@ namespace MagmaCore.Customs
             string hoverTextKey = "map" + GetHash().ToString();
             if (mapCharacterHoverText != null)
             {
-                TranslationUtils.CreateTranslation(hoverTextKey, mapCharacterHoverText);
+                TranslationUtils.CreateTranslation("english", hoverTextKey, mapCharacterHoverText);
             } else
             {
-                TranslationUtils.CreateTranslation(hoverTextKey, Main.LangTerms["mappurse"]);
+                TranslationUtils.CreateTranslation("english", hoverTextKey, Main.LangTerms["mappurse"]);
             }
 
             if (characterName != null)
             {
                 CharacterInstance.characterNameKey = GetHash().ToString();
-                TranslationUtils.CreateTranslation(CharacterInstance.characterNameKey, characterName);
+                TranslationUtils.CreateTranslation("english", CharacterInstance.characterNameKey, characterName);
             }
             if (characterDescription != null)
             { // concatenated "d" to differentiate from name key
                 CharacterInstance.characterDescriptionKey = GetHash().ToString() + "d";
-                TranslationUtils.CreateTranslation(CharacterInstance.characterDescriptionKey, characterDescription);
+                TranslationUtils.CreateTranslation("english", CharacterInstance.characterDescriptionKey, characterDescription);
             }
         }
 
