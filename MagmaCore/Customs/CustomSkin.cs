@@ -65,22 +65,15 @@ namespace MagmaCore.Customs
         private AnimatorOverrideController CreateAnimationOverrideController()
         {
             RuntimeAnimatorController playerController = Resources.FindObjectsOfTypeAll<RuntimeAnimatorController>().ToList().Find(x => x.name == "Player Controller");
-            MelonLogger.Error("x");
             AnimatorOverrideController animatorOverrideController = new AnimatorOverrideController(playerController);
-            MelonLogger.Error("z");
             animatorOverrideController.runtimeAnimatorController = playerController;
 
-            MelonLogger.Error("a");
-
             IList<KeyValuePair<AnimationClip, AnimationClip>> overrides = new List<KeyValuePair<AnimationClip, AnimationClip>>();
-            MelonLogger.Error("b");
             for (int animOverrideIndex = 0; animOverrideIndex < skin.animationOverrides.Count; animOverrideIndex++)
             {
-                MelonLogger.Error("c");
                 AnimatorOverridePair overridePair = skin.animationOverrides[animOverrideIndex];
                 for (int originalClipIndex = 0; originalClipIndex < animatorOverrideController.clips.Length; originalClipIndex++)
                 {
-                    MelonLogger.Error("d");
                     AnimationClip originalClip = animatorOverrideController.clips[originalClipIndex].originalClip;
                     if (originalClip.name == overridePair.originalClipName)
                     {
@@ -97,9 +90,7 @@ namespace MagmaCore.Customs
                     }
                 }
             }
-            MelonLogger.Error("e");
             animatorOverrideController.ApplyOverrides(overrides);
-            MelonLogger.Error("f");
             return animatorOverrideController;
         }
     }
