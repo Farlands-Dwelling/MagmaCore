@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace MagmaCore.Patches
 {
-    [HarmonyPatch(typeof(SaveManager), nameof(SaveManager.Load))]
+    [HarmonyPatch(typeof(ItemPouch), nameof(ItemPouch.SetAllItemsToItemsParent))]
     internal class FixBagSpritesPatch
     {
         static void Postfix()
