@@ -1,5 +1,5 @@
 ﻿using HarmonyLib;
-using MagmaCore.Managera;
+using MagmaCore.Managers;
 using System;
 using System.Collections;
 using System.Collections.Generic;

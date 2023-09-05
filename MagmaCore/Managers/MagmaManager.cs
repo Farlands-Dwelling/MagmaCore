@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace MagmaCore.Managera
+namespace MagmaCore.Managers
 {
     public class MagmaManager : MonoBehaviour
     {

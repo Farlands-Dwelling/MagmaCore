@@ -1,6 +1,6 @@
 ﻿using MagmaCore.Customs;
 using MagmaCore.ItemLoaderExtensions;
-using MagmaCore.Managera;
+using MagmaCore.Managers;
 using MelonLoader;
 using System;
 using System.Collections.Generic;

@@ -42,7 +42,10 @@ namespace MagmaCore.Customs
         public virtual List<ModItemDefinition> startingItems { get; protected set; }
         public virtual List<GameObject> startingObjectsForLimitedItemGet { get; protected set; }
         //public virtual List<RuntimeAnimatorController> animatorControllers { get; protected set; }
-        public virtual List<CustomSkin> skins { get; protected set; }
+        /// <value>
+        /// A list of animator controllers used for skins, typically animation override controllers. To make this process easier, use CustomSkins and the SkinInstance property.
+        /// </value>
+        public virtual List<RuntimeAnimatorController> skins { get; protected set; }
         public virtual List<float> characterSelectorSizeRatio { get; protected set; }
         public virtual List<float> yAdjustment { get; protected set; }
 
@@ -77,6 +80,7 @@ namespace MagmaCore.Customs
             if (startingHealth != 0) result.startingHealth = startingHealth;
             if (defaultEnergyPerTurn != 0) result.defaultEnergyPerTurn = defaultEnergyPerTurn;
             if (startingObjectsForLimitedItemGet != null) result.startingObjectsForLimitedItemGet = startingObjectsForLimitedItemGet;
+            if (skins != null) result.animatorControllers = skins;
             if (characterSelectorSizeRatio != null) result.characterSelectorSizeRatio = characterSelectorSizeRatio;
             if (yAdjustment != null) result.yAdjustment = yAdjustment;
             if (backpackPieces != null) result.backpackPieces = backpackPieces;
@@ -117,7 +121,6 @@ namespace MagmaCore.Customs
 
             CharacterInstance = result;
 
-            if (skins != null) AddSkins();
             CreateTranslations();
             CreateUIElements();
             CreateItemBlacklist();
@@ -148,16 +151,6 @@ namespace MagmaCore.Customs
             object persistentCalls = HarmonyLib.AccessTools.Field(typeof(UnityEventBase), "m_PersistentCalls").GetValue(button.onClick);
             MethodInfo registerPersistentListener = HarmonyLib.AccessTools.Method(HarmonyLib.AccessTools.TypeByName("PersistentCallGroup"), "RegisterObjectPersistentListener", new Type[] { typeof(int), typeof(UnityEngine.Object), typeof(Type), typeof(UnityEngine.Object), typeof(string) });
             registerPersistentListener.Invoke(persistentCalls, new object[] { 0, characterSelection, typeof(NewCharacterSelector), CharacterInstance, "ChooseCharacter" });
-        }
-
-        private void AddSkins()
-        {
-            CharacterInstance.animatorControllers.Clear();
-
-            foreach (CustomSkin skin in skins)
-            {
-                CharacterInstance.animatorControllers.Add(skin.SkinInstance);
-            }
         }
 
         private void CreateTranslations()
