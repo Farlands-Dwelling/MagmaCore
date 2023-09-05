@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MagmaCore.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -563,6 +564,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if "$(Username)" == "Quack" copy "$(TargetPath)" "C:\Users\Quack\AppData\Roaming\r2modmanPlus-local\BackpackHero\profiles\Farlands-Dev\Mods"</PostBuildEvent>
+    <PostBuildEvent>if "$(Username)" == "Quack" copy "$(TargetPath)" "C:\Users\Quack\AppData\Roaming\r2modmanPlus-local\BackpackHero\profiles\Farlands-Dev\Mods"
+if "$(Username)" == "Quack" copy "$(TargetDir)MagmaCore.xml" "C:\Users\Quack\AppData\Roaming\r2modmanPlus-local\BackpackHero\profiles\Farlands-Dev\Mods"</PostBuildEvent>
   </PropertyGroup>
 </Project>
