@@ -10,14 +10,35 @@ using UnityEngine;
 
 namespace MagmaCore.Patches
 {
-    [HarmonyPatch(typeof(ItemPouch), nameof(ItemPouch.SetAllItemsToItemsParent))]
-    internal class FixBagSpritesPatch
+    [HarmonyPatch(typeof(SaveManager), "Load")]
+    class FixBagSpritesPatch
     {
-        static void Postfix()
+        class PatchedEnumerator : IEnumerable
         {
-            MagmaManager.main.StartCoroutine(MagmaManager.main.FixBagCoroutine());
-        }
-            
+            public IEnumerator enumerator;
+            public Action postfixAction;
 
+            IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
+            public IEnumerator GetEnumerator()
+            {
+                while (enumerator.MoveNext())
+                {
+                    var item = enumerator.Current;
+                    yield return item;
+                }
+                postfixAction();
+            }
+        }
+
+        static void Postfix(ref IEnumerator __result)
+        {
+            Action postfixAction = () => MagmaManager.main.StartCoroutine(MagmaManager.main.FixBagCoroutine());
+            var patchedEnumerator = new PatchedEnumerator()
+            {
+                enumerator = __result,
+                postfixAction = postfixAction,
+            };
+            __result = patchedEnumerator.GetEnumerator();
+        }
     }
 }
