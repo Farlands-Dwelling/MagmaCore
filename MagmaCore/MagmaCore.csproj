@@ -565,6 +565,8 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if "$(Username)" == "Quack" copy "$(TargetPath)" "C:\Users\Quack\AppData\Roaming\r2modmanPlus-local\BackpackHero\profiles\Farlands-Dev\Mods"
-if "$(Username)" == "Quack" copy "$(TargetDir)MagmaCore.xml" "C:\Users\Quack\AppData\Roaming\r2modmanPlus-local\BackpackHero\profiles\Farlands-Dev\Mods"</PostBuildEvent>
+if "$(Username)" == "Quack" copy "$(TargetDir)MagmaCore.xml" "C:\Users\Quack\AppData\Roaming\r2modmanPlus-local\BackpackHero\profiles\Farlands-Dev\Mods"
+if "$(Username)" == "Owner" copy "$(TargetPath)" "C:\Users\Owner\AppData\Roaming\r2modmanPlus-local\BackpackHero\profiles\Default\Mods"
+if "$(Username)" == "Owner" copy "$(TargetDir)MagmaCore.xml" "C:\Users\Owner\AppData\Roaming\r2modmanPlus-local\BackpackHero\profiles\Default\Mods"</PostBuildEvent>
   </PropertyGroup>
 </Project>
