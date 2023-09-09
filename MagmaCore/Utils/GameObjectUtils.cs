@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -33,6 +34,49 @@ namespace MagmaCore.Utils
         {
             var json = JsonUtility.ToJson(from);
             JsonUtility.FromJsonOverwrite(json, to);
+        }
+
+        public static T GetCopyOf<T>(this Component comp, T other) where T : Component
+        {
+            Type type = comp.GetType();
+            if (type != other.GetType()) return null; // type mis-match
+            BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Default | BindingFlags.DeclaredOnly;
+            PropertyInfo[] pinfos = type.GetProperties(flags);
+            foreach (var pinfo in pinfos)
+            {
+                if (pinfo.CanWrite)
+                {
+                    try
+                    {
+                        pinfo.SetValue(comp, pinfo.GetValue(other, null), null);
+                    }
+                    catch { } // In case of NotImplementedException being thrown. For some reason specifying that exception didn't seem to catch it, so I didn't catch anything specific.
+                }
+            }
+            FieldInfo[] finfos = type.GetFields(flags);
+            foreach (var finfo in finfos)
+            {
+                finfo.SetValue(comp, finfo.GetValue(other));
+            }
+            return comp as T;
+        }
+
+        public static GameObject DuplicateOnto(this GameObject originalObject, GameObject objectToCopyOnto)
+        {
+            foreach (Component comp in originalObject.GetComponents<Component>()) 
+            {
+                objectToCopyOnto.AddComponent(comp.GetType()).GetCopyOf(comp);
+            }
+
+            foreach (Transform child in originalObject.transform)
+            {
+                Transform.Instantiate(child).SetParent(objectToCopyOnto.transform);
+            }
+
+            objectToCopyOnto.tag = originalObject.tag;
+            objectToCopyOnto.layer = originalObject.layer;
+
+            return objectToCopyOnto;
         }
     }
 }

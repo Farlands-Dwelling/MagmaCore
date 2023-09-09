@@ -24,7 +24,6 @@ namespace MagmaCore.Utils
             {
                 ModLoader.main.languageTerms.Add(language, new Dictionary<string, string>());
                 MelonLogger.Error($"Language not found: {language}. Language has been created.");
-                return;
             }
                 
 
