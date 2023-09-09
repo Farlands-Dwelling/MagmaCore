@@ -9,7 +9,7 @@ namespace MagmaCore.Customs
 {
     public abstract class CustomEvent : CustomBase
     {
-        public DungeonLevel.EventEncounter2 EventInstance;
+        public DungeonLevel.EventEncounter2 Instance;
 
         public virtual List<RunType.RunProperty.Type> disablingRunProperties { get; protected set; }
         /// <summary>
@@ -18,7 +18,7 @@ namespace MagmaCore.Customs
         public virtual List<GameObject> eventType { get; protected set; }
         public virtual List<DungeonLevel.Floor> floor { get; protected set; }
         public virtual List<RunType.RunProperty.Type> requiredRunProperties { get; protected set; }
-        public abstract List<MetaProgressSaveManager.MetaProgressCondition> storyModeConditions { get; protected set;}
+        public virtual List<MetaProgressSaveManager.MetaProgressCondition> storyModeConditions { get; protected set;}
 
         public override void Convert()
         {
@@ -29,7 +29,7 @@ namespace MagmaCore.Customs
             eventEncounter.requiredRunProperties = requiredRunProperties;
             eventEncounter.storyModeConditions = storyModeConditions;
 
-            EventInstance = eventEncounter;
+            Instance = eventEncounter;
         }
     }
 }
