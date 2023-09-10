@@ -2,6 +2,7 @@
 using MagmaCore.Patches;
 using MagmaCore.Utils;
 using MelonLoader;
+using Steamworks;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,7 +18,11 @@ namespace MagmaCore
     public abstract class MagmaMod : MelonMod
     {
         public abstract string InternalModName { get; }
-        public virtual List<string> Dependencies { get; private set; } = new List<string>();
+        /// <value>
+        /// List of workshop IDs for mods that should be installed on game launched. You can find the ID of a workshop item by right clicking on the workshop page, copying the page URL, and looking at ID path in the URL.
+        /// </value>
+        public virtual List<ulong> Dependencies { get; private set; } = new List<ulong>();
+        private List<ulong> PreInstalledMods = new List<ulong>();
 
         public static Dictionary<string, string> LangTerms = new Dictionary<string, string>();
         public static LangaugeManager LangManager;
@@ -26,14 +31,22 @@ namespace MagmaCore
 
         public bool FirstLoad = true;
 
-
         public sealed override void OnInitializeMelon()
         {
-            //ModsFinishedLoadingPatch.OnLoadedMods += OnLoadedMods;
-            //ModsFinishedLoadingPatch.OnLoadedMods += HandleDependencies;
             MelonCoroutines.Start(WaitUntilModsLoaded());
 
             OnInitializeMagma();
+        }
+
+        public sealed override void OnApplicationStart()
+        {
+            MelonCoroutines.Start(SubscribeToDependencies());
+            Callback<Steamworks.ItemInstalled_t>.Create(EnableDependency);
+        }
+
+        public sealed override void OnApplicationQuit()
+        {
+            UnsubscribeFromDependencies();
         }
 
         IEnumerator WaitUntilModsLoaded()
@@ -102,16 +115,57 @@ namespace MagmaCore
             return extension;
         }
 
-        // When main menu is opened, instantiate a popup that says what mods you need
-        // For now it will say dependency missing, but when the ModLoader is added to the Main Menu scene, change it so it checks when main menu is loaded (and item mods are fully initalized)
-        protected void HandleDependencies()
+        private IEnumerator SubscribeToDependencies()
         {
-            List<string> missingDependencies = new List<string>();
-            foreach (string modName in Dependencies)
+            yield return new WaitUntil(() => SteamManager.s_EverInitialized == true);
+
+            // Create a list of already subscribed mods, so that when it uninstalls mods, it won't uninstall a wanted mod
+            if (SteamManager.s_EverInitialized)
             {
-                if (ModpackUtils.GetModpackFromInternalName(modName) == null)
+                PublishedFileId_t[] fileIDs = new PublishedFileId_t[SteamUGC.GetNumSubscribedItems()];
+                SteamUGC.GetSubscribedItems(fileIDs, SteamUGC.GetNumSubscribedItems());
+                foreach (var ID in fileIDs)
                 {
-                    missingDependencies.Add(modName);
+                    PreInstalledMods.Add(ID.m_PublishedFileId);
+                }
+
+                foreach (var ID in Dependencies)
+                {
+                    if (!PreInstalledMods.Contains(ID))
+                        SteamUGC.SubscribeItem(new PublishedFileId_t(ID));
+                }
+            }
+        }
+        private void UnsubscribeFromDependencies()
+        {
+            foreach (var ID in Dependencies)
+            {
+                if (!PreInstalledMods.Contains(ID))
+                    SteamUGC.UnsubscribeItem(new PublishedFileId_t(ID));
+            }
+        }
+
+        private void EnableDependency(Steamworks.ItemInstalled_t pCallback)
+        {
+            ulong fileId = pCallback.m_nPublishedFileId.m_PublishedFileId;
+
+            MelonCoroutines.Start(EnableMod(fileId));
+        }
+
+        private IEnumerator EnableMod(ulong fileId)
+        {
+            yield return new WaitUntil(() => GameObject.FindObjectOfType<ModLoader>() != null);
+            yield return new WaitUntil(() => ModLoader.main.dataReady);
+
+            ModLoader.main.ReloadModpacks();
+            ModMetaSave.SaveModData();
+
+            if (Dependencies.Contains(fileId))
+            {
+                ModLoader.ModpackInfo mod = ModLoader.main.modpacks.Find(x => x.workshop != null && x.workshop.fileId.m_PublishedFileId == fileId);
+                if (mod != null && !mod.loaded)
+                {
+                    ModLoader.main.LoadModpack(mod);
                 }
             }
         }
