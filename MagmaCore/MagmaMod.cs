@@ -11,6 +11,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 namespace MagmaCore
@@ -23,6 +24,7 @@ namespace MagmaCore
         /// </value>
         public virtual List<ulong> Dependencies { get; private set; } = new List<ulong>();
         private List<ulong> PreInstalledMods = new List<ulong>();
+        private List<ModLoader.ModpackInfo> EnabledDependencies = new List<ModLoader.ModpackInfo>();
 
         public static Dictionary<string, string> LangTerms = new Dictionary<string, string>();
         public static LangaugeManager LangManager;
@@ -30,6 +32,7 @@ namespace MagmaCore
         public static string LoadedScene;
 
         public bool FirstLoad = true;
+
 
         public sealed override void OnInitializeMelon()
         {
@@ -82,6 +85,8 @@ namespace MagmaCore
         public virtual void OnInitializeMagma() { }
 
         public virtual void OnLoadedMods() { }
+
+        protected virtual void OnEnabledAllDependencies() { }
 
         public virtual void OnFirstMainMenuLoad() { }
 
@@ -162,10 +167,21 @@ namespace MagmaCore
 
             if (Dependencies.Contains(fileId))
             {
-                ModLoader.ModpackInfo mod = ModLoader.main.modpacks.Find(x => x.workshop != null && x.workshop.fileId.m_PublishedFileId == fileId);
-                if (mod != null && !mod.loaded)
+                ModLoader.ModpackInfo mod = ModLoader.main.modpacks.FindAll(x => x.workshop != null).Find(x => x.workshop.fileId.m_PublishedFileId == fileId);
+                if (mod != null)
                 {
-                    ModLoader.main.LoadModpack(mod);
+                    if (!mod.loaded)
+                    {
+                        ModLoader.main.LoadModpack(mod);
+                    }
+                    yield return new WaitUntil(() => mod.loaded);
+                    EnabledDependencies.Add(mod);
+
+                    if (EnabledDependencies.Count >= Dependencies.Count)
+                    {
+                        OnEnabledAllDependencies();
+                        yield break;
+                    }
                 }
             }
         }
