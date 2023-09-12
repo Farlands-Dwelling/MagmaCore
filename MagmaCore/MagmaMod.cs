@@ -57,6 +57,11 @@ namespace MagmaCore
             yield return new WaitUntil(() => GameObject.FindObjectOfType<ModLoader>() != null);
             yield return new WaitUntil(() => ModLoader.main.dataReady);
             OnLoadedMods();
+
+            if (Dependencies.Intersect(PreInstalledMods).Count() == Dependencies.Count())
+            {
+                OnEnabledAllDependencies();
+            }
         }
 
         public sealed override void OnSceneWasLoaded(int buildIndex, string sceneName)
