@@ -532,6 +532,7 @@
     <Compile Include="Customs\CustomDungeonEventSpawn.cs" />
     <Compile Include="Customs\CustomEvent.cs" />
     <Compile Include="Customs\CustomSkin.cs" />
+    <Compile Include="Customs\CustomStatusEffect.cs" />
     <Compile Include="Managers\MagmaManager.cs" />
     <Compile Include="Customs\ItemLoaderExtension.cs" />
     <Compile Include="Datatypes\ModItemDefinition.cs" />
@@ -541,6 +542,8 @@
     <Compile Include="Main.cs" />
     <Compile Include="Patches\AddStartingObjectsPatch.cs" />
     <Compile Include="Patches\AddCharactersPatch.cs" />
+    <Compile Include="Patches\ApplyMyEffectPatch.cs" />
+    <Compile Include="Patches\StatusEffectPatches.cs" />
     <Compile Include="Patches\ContextMenuTypePatch.cs" />
     <Compile Include="Patches\FixBagSpritesPatch.cs" />
     <Compile Include="Patches\LoadModItemPatch.cs" />
@@ -553,6 +556,7 @@
     <Compile Include="Utils\CharacterUtils.cs" />
     <Compile Include="Utils\CustomUtils.cs" />
     <Compile Include="Utils\GameObjectUtils.cs" />
+    <Compile Include="Utils\HarmonyUtils.cs" />
     <Compile Include="Utils\ItemLoaderUtils.cs" />
     <Compile Include="Utils\ItemUtils.cs" />
     <Compile Include="Utils\ModpackUtils.cs" />

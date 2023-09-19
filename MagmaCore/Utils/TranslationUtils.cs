@@ -1,4 +1,5 @@
-﻿using MelonLoader;
+﻿using MagmaCore.Customs;
+using MelonLoader;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,32 @@ namespace MagmaCore.Utils
 {
     public static class TranslationUtils
     {
+        // TODO: Add more XML documentation.
+        public class Translation
+        {
+            public string TranslationKey;
+            public Dictionary<string, string> LanguageTranslationDict;
+
+            public Translation(string translationKey, Dictionary<string, string> languageTranslationDict)
+            {
+                TranslationKey = translationKey;
+                LanguageTranslationDict = languageTranslationDict;
+                foreach (KeyValuePair<string, string> kvp in LanguageTranslationDict)
+                {
+                    CreateTranslation(kvp.Key, TranslationKey, kvp.Value);
+                }
+            }
+            public Translation(CustomBase custom, Dictionary<string, string> languageTranslationDict)
+            {
+                TranslationKey = custom.ID.ToString();
+                LanguageTranslationDict = languageTranslationDict;
+                foreach (KeyValuePair<string, string> kvp in LanguageTranslationDict)
+                {
+                    CreateTranslation(kvp.Key, TranslationKey, kvp.Value);
+                }
+            }
+        }
+
         /// <summary>
         /// Adds a translation to the game using the given language.
         /// </summary>
@@ -39,6 +66,11 @@ namespace MagmaCore.Utils
                     ModLoader.main.languageTerms[langTerm.Key].Add(key, value);
                 }
             }
+        }
+
+        public static void CreateTranslation(string language, KeyValuePair<string, string> keyValuePair)
+        {
+            CreateTranslation(language, keyValuePair.Key, keyValuePair.Value);
         }
 
         public static KeyValuePair<string, string> GetOrCreateTranslation(string language, string key, string value)
