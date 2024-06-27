@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 
-[assembly: MelonInfo(typeof(MagmaCore.Main), "Magma Core", "0.1.0", "QuackAndCheese")]
+[assembly: MelonInfo(typeof(MagmaCore.Main), "Magma Core", "1.0.0", "QuackAndCheese")]
 [assembly: MelonGame("TheJaspel", "Backpack Hero")]
 
 // General Information about an assembly is controlled through the following

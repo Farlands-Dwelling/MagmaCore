@@ -161,7 +161,7 @@ namespace MagmaCore.Customs
                 TranslationUtils.CreateTranslation("english", hoverTextKey, mapCharacterHoverText);
             } else
             {
-                TranslationUtils.CreateTranslation("english", hoverTextKey, Main.LangTerms["mappurse"]);
+                TranslationUtils.CreateTranslation("english", hoverTextKey, "No description set.");
             }
 
             if (characterName != null)

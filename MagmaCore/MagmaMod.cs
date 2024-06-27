@@ -83,8 +83,8 @@ namespace MagmaCore
 
         private void SetFields()
         {
-            LangManager = GameObject.FindObjectOfType<LangaugeManager>();
-            LangTerms = LangManager.languageTerms;
+            //LangManager = GameObject.FindObjectOfType<LangaugeManager>();
+            LangTerms = LangaugeManager.main.GetTerms();
         }
 
         public virtual void OnInitializeMagma() { }
