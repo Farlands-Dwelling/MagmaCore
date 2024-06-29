@@ -55,8 +55,13 @@ namespace MagmaCore.Utils
         {
             for (int i = 0; i < itemList.Count; i++)
             {
+                if (itemList[i] == null)
+                {
+                    continue;
+                }
+
                 ModdedItem component = itemList[i].GetComponent<ModdedItem>();
-                if (!(component != null) || component.placeholder == null || !(component.placeholder != ""))
+                if (component == null || component.placeholder == null || component.placeholder == "")
                 {
                     continue;
                 }
