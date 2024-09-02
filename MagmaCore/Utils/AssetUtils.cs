@@ -1,7 +1,9 @@
-﻿using System;
+﻿using MelonLoader;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -22,6 +24,21 @@ namespace MagmaCore.Utils
             string AssetBundlePath = Path.Combine(Path.GetDirectoryName(assetBundleLocation), assetBundleName);
 
             return AssetBundle.LoadFromFile(AssetBundlePath);
+        }
+
+        public static List<Assembly> GetModdedAssemblies()
+        {
+            List<Assembly> moddedAssemblies = new List<Assembly>();
+
+            foreach (var mod in MelonAssembly.LoadedAssemblies)
+            {
+                if (mod.Assembly != null)
+                {
+                    moddedAssemblies.Add(mod.Assembly);
+                }
+            }
+
+            return moddedAssemblies;
         }
     }
 }

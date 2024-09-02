@@ -36,52 +36,52 @@
       <HintPath>..\packages\HarmonyX.2.10.2\lib\net45\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="AstarPathfindingProject, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\AstarPathfindingProject.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\AstarPathfindingProject.dll</HintPath>
     </Reference>
     <Reference Include="com.fluid.database, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\com.fluid.database.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\com.fluid.database.dll</HintPath>
     </Reference>
     <Reference Include="com.fluid.dialogue, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\com.fluid.dialogue.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\com.fluid.dialogue.dll</HintPath>
     </Reference>
     <Reference Include="com.fluid.simple-singleton, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\com.fluid.simple-singleton.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\com.fluid.simple-singleton.dll</HintPath>
     </Reference>
     <Reference Include="com.fluid.simple-spellcheck, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\com.fluid.simple-spellcheck.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\com.fluid.simple-spellcheck.dll</HintPath>
     </Reference>
     <Reference Include="com.fluid.unity-event-plus, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\com.fluid.unity-event-plus.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\com.fluid.unity-event-plus.dll</HintPath>
     </Reference>
     <Reference Include="com.playeveryware.eos-Editor.steam.utility, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\com.playeveryware.eos-Editor.steam.utility.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\com.playeveryware.eos-Editor.steam.utility.dll</HintPath>
     </Reference>
     <Reference Include="com.playeveryware.eos.core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\com.playeveryware.eos.core.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\com.playeveryware.eos.core.dll</HintPath>
     </Reference>
     <Reference Include="com.rlabrecque.steamworks.net, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\com.rlabrecque.steamworks.net.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\com.rlabrecque.steamworks.net.dll</HintPath>
     </Reference>
     <Reference Include="ES3Assembly, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\ES3Assembly.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\ES3Assembly.dll</HintPath>
     </Reference>
     <Reference Include="GalaxyCSharp, Version=3.133.7.0, Culture=neutral, PublicKeyToken=c78c4b7d4be3eaf9, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\GalaxyCSharp.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\GalaxyCSharp.dll</HintPath>
     </Reference>
     <Reference Include="MelonLoader, Version=0.6.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LavaGang.MelonLoader.0.6.1\lib\net35\MelonLoader.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Microsoft.CSharp.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Microsoft.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil, Version=0.11.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
       <HintPath>..\packages\Mono.Cecil.0.11.4\lib\net40\Mono.Cecil.dll</HintPath>
@@ -96,7 +96,7 @@
       <HintPath>..\packages\Mono.Cecil.0.11.4\lib\net40\Mono.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Mono.Security.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Mono.Security.dll</HintPath>
     </Reference>
     <Reference Include="MonoMod.RuntimeDetour, Version=22.3.23.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoMod.RuntimeDetour.22.3.23.4\lib\net452\MonoMod.RuntimeDetour.dll</HintPath>
@@ -105,436 +105,436 @@
       <HintPath>..\packages\MonoMod.Utils.22.3.23.4\lib\net452\MonoMod.Utils.dll</HintPath>
     </Reference>
     <Reference Include="netstandard, Version=2.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\netstandard.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\netstandard.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.ClipperLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Pathfinding.ClipperLib.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Pathfinding.ClipperLib.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced, Version=1.9.1.9000, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Poly2Tri, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Pathfinding.Poly2Tri.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Pathfinding.Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="SimpleAssemblies, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\SimpleAssemblies.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\SimpleAssemblies.dll</HintPath>
     </Reference>
     <Reference Include="StbImageSharp, Version=2.27.13.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\StbImageSharp.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\StbImageSharp.dll</HintPath>
     </Reference>
     <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.ComponentModel.Composition.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.ComponentModel.Composition.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Configuration.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Data.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Data.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Data.DataSetExtensions.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Data.DataSetExtensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Drawing.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Drawing.dll</HintPath>
     </Reference>
     <Reference Include="System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.EnterpriseServices.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.EnterpriseServices.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Compression, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.IO.Compression.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.IO.Compression.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IO.Compression.FileSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.IO.Compression.FileSystem.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.IO.Compression.FileSystem.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Net.Http.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Net.Http.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Numerics.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Runtime.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Runtime.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Runtime.Serialization.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Runtime.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Security.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Security.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceModel.Internals, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.ServiceModel.Internals.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.ServiceModel.Internals.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Transactions.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Transactions.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Xml.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Xml.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\System.Xml.Linq.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\System.Xml.Linq.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Api, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Api.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Api.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Api.Core, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Api.Core.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Api.Core.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Api.Core.Enums, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Api.Core.Enums.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Api.Core.Enums.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Api.Core.Interfaces, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Api.Core.Interfaces.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Api.Core.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Api.Core.Models, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Api.Core.Models.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Api.Core.Models.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Api.Helix, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Api.Helix.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Api.Helix.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Api.Helix.Models, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Api.Helix.Models.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Api.Helix.Models.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Api.V5.Models, Version=3.2.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Api.V5.Models.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Api.V5.Models.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Client, Version=3.3.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Client.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Client.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Client.Enums, Version=3.3.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Client.Enums.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Client.Enums.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Client.Models, Version=3.3.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Client.Models.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Client.Models.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Communication, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Communication.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Communication.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.PubSub, Version=3.2.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.PubSub.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.PubSub.dll</HintPath>
     </Reference>
     <Reference Include="TwitchLib.Unity, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\TwitchLib.Unity.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\TwitchLib.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.2D.Animation.Runtime.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.2D.Common.Runtime.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.2D.IK.Runtime.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.2D.PixelPerfect.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Extras, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.2D.Tilemap.Extras.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.2D.Tilemap.Extras.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Burst.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe, Version=4.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Burst.Unsafe.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem, Version=1.6.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.InputSystem.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem.ForUI, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.InputSystem.ForUI.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.InputSystem.ForUI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Mathematics.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Analytics, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Analytics.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Core.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Analytics, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Core.Analytics.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Configuration, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Core.Configuration.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Core.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Device, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Core.Device.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Core.Device.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Environments, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Core.Environments.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Core.Environments.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Environments.Internal, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Core.Environments.Internal.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Core.Environments.Internal.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Internal, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Core.Internal.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Core.Internal.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Networking, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Core.Networking.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Core.Networking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Registration, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Core.Registration.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Core.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Scheduler, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Core.Scheduler.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Core.Scheduler.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Telemetry, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Core.Telemetry.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Core.Telemetry.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Threading, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Services.Core.Threading.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Services.Core.Threading.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.TextMeshPro.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\Unity.Timeline.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AccessibilityModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.AccessibilityModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.AccessibilityModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.AIModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.AIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AndroidJNIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.AndroidJNIModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.AndroidJNIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ARModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.ARModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.ARModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClothModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.ClothModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.ClothModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClusterInputModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.ClusterInputModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.ClusterInputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClusterRendererModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.ClusterRendererModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CrashReportingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.CrashReportingModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.CrashReportingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.DirectorModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.DirectorModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.DirectorModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.DSPGraphModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.DSPGraphModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.DSPGraphModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GameCenterModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.GameCenterModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.GameCenterModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.GIModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.GIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GridModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.GridModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.GridModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HotReloadModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.HotReloadModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.HotReloadModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.InputModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.InputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.JSONSerializeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.LocalizationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.LocalizationModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.LocalizationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.NVIDIAModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.NVIDIAModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.NVIDIAModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.ParticleSystemModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PerformanceReportingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.PerformanceReportingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.Physics2DModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.Physics2DModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ProfilerModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.ProfilerModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.ProfilerModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ScreenCaptureModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.ScreenCaptureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SharedInternalsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.SharedInternalsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.SpriteMaskModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteShapeModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.SpriteShapeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StreamingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.StreamingModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.StreamingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SubstanceModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.SubstanceModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.SubstanceModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SubsystemsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.SubsystemsModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.SubsystemsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.TerrainModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.TerrainModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainPhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.TerrainPhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextCoreFontEngineModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextCoreTextEngineModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TilemapModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.TilemapModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.TilemapModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TLSModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.TLSModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.TLSModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UIElementsModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsNativeModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UIElementsNativeModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UIElementsNativeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UmbraModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UmbraModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UmbraModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UNETModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UNETModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UNETModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsCommonModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UnityAnalyticsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityConnectModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UnityConnectModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityCurlModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UnityCurlModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UnityCurlModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityTestProtocolModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UnityTestProtocolModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UnityWebRequestModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestTextureModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestWWWModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VehiclesModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.VehiclesModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.VehiclesModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VFXModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.VFXModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.VFXModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VideoModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.VideoModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.VideoModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VirtualTexturingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.VirtualTexturingModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.VirtualTexturingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VRModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.VRModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.VRModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.WindModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.WindModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XRModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1148\lib\UnityEngine.XRModule.dll</HintPath>
+      <HintPath>..\packages\BackpackHero.GameLibs.1.0.1153\lib\UnityEngine.XRModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -544,6 +544,7 @@
     <Compile Include="Customs\CustomDungeonEventSpawn.cs" />
     <Compile Include="Customs\CustomEvent.cs" />
     <Compile Include="Customs\CustomSkin.cs" />
+    <Compile Include="Customs\GetES3AssembliesPatch.cs" />
     <Compile Include="Managers\MagmaManager.cs" />
     <Compile Include="Customs\ItemLoaderExtension.cs" />
     <Compile Include="Datatypes\ModItemDefinition.cs" />
