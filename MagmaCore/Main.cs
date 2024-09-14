@@ -30,7 +30,8 @@ namespace MagmaCore
         {
             foreach (CustomBase custom in CustomBase.Customs.Values)
             {
-                custom.Convert();
+                if (!custom.UniqueConversionMethod)
+                    custom.Convert();
             }
         }
 

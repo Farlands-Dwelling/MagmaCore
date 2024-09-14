@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using MagmaCore.Utils;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using HarmonyLib;
 
 namespace MagmaCore.Customs
 {
@@ -32,6 +34,8 @@ namespace MagmaCore.Customs
         public virtual DungeonSpawner.DungeonEventSpawn.Type type { get; protected set; } = DungeonSpawner.DungeonEventSpawn.Type.mainPath;
         public virtual List<Character.CharacterName> validForCharacters { get; private set; } = new List<Character.CharacterName>();
 
+        public override bool UniqueConversionMethod => true;
+
         public override void Convert()
         {
             EventInstance = new DungeonSpawner.DungeonEventSpawn();
@@ -59,10 +63,28 @@ namespace MagmaCore.Customs
                             floor = floor
                         };
                         dungeon.itemsToSpawnOnMap.Add(eventSpawn);
+                        eventSpawn.itemsToSpawnOnMap = new List<DungeonSpawner.DungeonEventSpawn>();
                     }
+                    if (eventSpawn.itemsToSpawnOnMap == null)
+                        eventSpawn.itemsToSpawnOnMap = new List<DungeonSpawner.DungeonEventSpawn>();
+
                     eventSpawn.itemsToSpawnOnMap.Add(EventInstance);
                 }
             }
+        }
+    }
+
+    [HarmonyPatch(typeof(DungeonSpawner), "SetAllEncounters")]
+    class DungeonSpawnerAwake_Patch
+    {
+        static bool Prefix(ref DungeonSpawner __instance)
+        {
+            foreach (CustomBase custom in CustomBase.Customs.Values)
+            {
+                if (custom is CustomDungeonEventSpawn)
+                    custom.Convert();
+            }
+            return true;
         }
     }
 }
