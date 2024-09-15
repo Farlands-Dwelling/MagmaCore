@@ -23,7 +23,13 @@ namespace MagmaCore.Utils
         {
             ItemUtils.FindItem(itemDef).validForCharacters.Add(character.characterName);
         }
-
+        public static void AddItemsToPool(this Character character, List<Item2> items)
+        {
+            foreach (Item2 item in items)
+            {
+                item.validForCharacters.Add(character.characterName);
+            }
+        }
         public static CustomCharacter FindCustomCharacter(string characterName, string modName)
         {
             return CustomUtils.GetCastedCustom<CustomCharacter>(modName, characterName);
