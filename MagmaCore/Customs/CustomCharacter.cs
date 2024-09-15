@@ -71,6 +71,7 @@ namespace MagmaCore.Customs
         {
             Character purse = Resources.FindObjectsOfTypeAll<Character>().ToList().Find(x => x.characterName == Character.CharacterName.Purse);
             Character result = ScriptableObject.Instantiate(purse);//ScriptableObject.CreateInstance<Character>();
+            CharacterInstance = result;
 
             if (standardGridSprite != null) result.standardGridSprite = standardGridSprite;
             if (itemBorderBackgroundSprites != null) result.itemBorderBackgroundSprites = itemBorderBackgroundSprites;
@@ -119,7 +120,6 @@ namespace MagmaCore.Customs
             result.levelUps = levelUps;
             result.buttonTypes = buttonTypes;*/
 
-            CharacterInstance = result;
 
             CreateTranslations();
             CreateUIElements();
