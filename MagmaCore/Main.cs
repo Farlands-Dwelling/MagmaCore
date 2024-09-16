@@ -16,7 +16,8 @@ namespace MagmaCore
         public override string InternalModName => "MagmaCore";
 
         public static readonly List<Character> Characters = new List<Character>();
-        public static List<MonoBehaviour> Managers = new List<MonoBehaviour>();
+        public static List<MonoBehaviour> ManagerTypes = new List<MonoBehaviour>();
+        public static List<Component> Managers = new List<Component>();
         public static readonly int ExtraItemFunctionNum = 555; //TODO: placeholder, should definitely find a better way than using numbers in jsons
 
         public override void OnInitializeMagma()
@@ -39,9 +40,10 @@ namespace MagmaCore
         {
             if (sceneName == "Game")
             {
-                foreach (MonoBehaviour manager in Managers)
+                Managers.Clear();
+                foreach (MonoBehaviour manager in ManagerTypes)
                 {
-                    GameObject.FindObjectOfType<GameManager>().gameObject.AddComponent(manager.GetType());
+                    Managers.Add(GameObject.FindObjectOfType<GameManager>().gameObject.AddComponent(manager.GetType()));
                 }
             }
         }

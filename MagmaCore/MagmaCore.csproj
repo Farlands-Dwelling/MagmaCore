@@ -545,6 +545,7 @@
     <Compile Include="Customs\CustomEvent.cs" />
     <Compile Include="Customs\CustomSkin.cs" />
     <Compile Include="Customs\GetES3AssembliesPatch.cs" />
+    <Compile Include="Managers\CustomCharacterManager.cs" />
     <Compile Include="Managers\MagmaManager.cs" />
     <Compile Include="Customs\ItemLoaderExtension.cs" />
     <Compile Include="Datatypes\ModItemDefinition.cs" />
@@ -560,6 +561,7 @@
     <Compile Include="Patches\ModsFinishedLoadingPatch.cs" />
     <Compile Include="Patches\SetCharacterFromNumberPatch.cs" />
     <Compile Include="Patches\SetNumberFromCharacterPatch.cs" />
+    <Compile Include="Patches\CharacterManagerPatches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Publicizer.cs" />
     <Compile Include="Utils\AssetUtils.cs" />

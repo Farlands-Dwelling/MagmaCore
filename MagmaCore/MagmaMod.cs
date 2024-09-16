@@ -114,7 +114,7 @@ namespace MagmaCore
         public T AddManager<T>() where T : MonoBehaviour, new()
         {
             T component = new T();
-            Main.Managers.Add(component);
+            Main.ManagerTypes.Add(component);
             return component;
         }
 
