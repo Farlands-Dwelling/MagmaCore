@@ -538,6 +538,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customs\CustomActionButton.cs" />
     <Compile Include="Customs\CustomBase.cs" />
     <Compile Include="Customs\CustomCharacter.cs" />
     <Compile Include="Customs\CustomDungeonEvent.cs" />
@@ -556,6 +557,7 @@
     <Compile Include="Patches\AddStartingObjectsPatch.cs" />
     <Compile Include="Patches\AddCharactersPatch.cs" />
     <Compile Include="Patches\ContextMenuTypePatch.cs" />
+    <Compile Include="Patches\CreateButtonPatch.cs" />
     <Compile Include="Patches\FixBagSpritesPatch.cs" />
     <Compile Include="Patches\LoadModItemPatch.cs" />
     <Compile Include="Patches\ModsFinishedLoadingPatch.cs" />
