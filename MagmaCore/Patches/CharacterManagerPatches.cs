@@ -14,7 +14,7 @@ namespace MagmaCore.Patches
 {
     public static class CharacterManagerHelper
     {
-        public static void InvokeForMainCharacter(Action<object> action, string methodName)
+        public static void InvokeForMainCharacter(string methodName)
         {
             foreach (MonoBehaviour manager in Main.Managers)
             {
@@ -44,7 +44,7 @@ namespace MagmaCore.Patches
     {
         static void Postfix()
         {
-            CharacterManagerHelper.InvokeForMainCharacter(characterManager => { }, "StartCombat");
+            CharacterManagerHelper.InvokeForMainCharacter("StartCombat");
         }
     }
 
@@ -53,7 +53,7 @@ namespace MagmaCore.Patches
     {
         static void Postfix()
         {
-            CharacterManagerHelper.InvokeForMainCharacter(characterManager => { }, "EndCombat");
+            CharacterManagerHelper.InvokeForMainCharacter("EndCombat");
         }
     }
 
@@ -62,7 +62,7 @@ namespace MagmaCore.Patches
     {
         static void Postfix()
         {
-            CharacterManagerHelper.InvokeForMainCharacter(characterManager => { }, "EndTurn");
+            CharacterManagerHelper.InvokeForMainCharacter("EndTurn");
         }
     }
 
@@ -71,7 +71,7 @@ namespace MagmaCore.Patches
     {
         static void Postfix()
         {
-            CharacterManagerHelper.InvokeForMainCharacter(characterManager => { }, "StartTurn");
+            CharacterManagerHelper.InvokeForMainCharacter("StartTurn");
         }
     }
 
@@ -80,7 +80,7 @@ namespace MagmaCore.Patches
     {
         static void Postfix()
         {
-            CharacterManagerHelper.InvokeForMainCharacter(characterManager => { }, "Spawn");
+            CharacterManagerHelper.InvokeForMainCharacter("Spawn");
         }
     }
 
@@ -89,7 +89,7 @@ namespace MagmaCore.Patches
     {
         static void Postfix()
         {
-            CharacterManagerHelper.InvokeForMainCharacter(characterManager => { }, "RemoveUI");
+            CharacterManagerHelper.InvokeForMainCharacter("RemoveUI");
         }
     }
 }
