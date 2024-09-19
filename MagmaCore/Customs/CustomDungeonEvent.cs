@@ -12,12 +12,12 @@ namespace MagmaCore.Customs
     public abstract class CustomDungeonEvent : CustomBase
     {
         public DungeonEvent Instance;
+        public GameObject Prefab;
 
-        public abstract GameObject prefabToCopyOnto { get; }
         public virtual Vector2 caveIn { get; protected set; }
         public virtual string mapTextOverrideKey { get; protected set; } = "";
         public virtual bool passable { get; protected set; } = true;
-        public virtual DungeonEvent.DungeonEventType dungeonEventType { get; protected set; }
+        public virtual DungeonEvent.DungeonEventType dungeonEventType { get; protected set; } = DungeonEvent.DungeonEventType.Chance;
         public virtual List<GameObject> itemsToSpawn { get; protected set; } = new List<GameObject>();
         public virtual GameObject exitPrefab { get; protected set; }
         public virtual Sprite iconSprite { get; protected set; }
@@ -30,29 +30,30 @@ namespace MagmaCore.Customs
 
         public override void Convert()
         {
-            // CHANGE SO IT COPIES ONTO prefab
-            DungeonEvent dungeonEventOrig = Resources.FindObjectsOfTypeAll<DungeonEvent>().ToList().Find(x => x.gameObject.name == "Random Event").gameObject.GetComponent<DungeonEvent>();
-            DungeonEvent dungeonEvent = prefabToCopyOnto.AddComponent<DungeonEvent>().GetCopyOf(dungeonEventOrig);
-            prefabToCopyOnto.AddComponent<SpriteRenderer>().GetCopyOf(dungeonEventOrig.gameObject.GetComponent<SpriteRenderer>());
-            UnityEngine.Transform.Instantiate(dungeonEventOrig.gameObject.GetComponentInChildren<TextMeshPro>(true).transform).SetParent(prefabToCopyOnto.transform);
-            //DungeonEvent dungeonEvent = dungeonEventOrig.gameObject.DuplicateOnto(prefabToCopyOnto).GetComponent<DungeonEvent>();
+            GameObject dungeonEventOrig = Resources.FindObjectsOfTypeAll<DungeonEvent>().ToList().Find(x => x.gameObject.name == "Random Event").gameObject;
+            Prefab = GameObject.Instantiate(dungeonEventOrig);
+            Instance = Prefab.GetComponent<DungeonEvent>();
 
-            dungeonEvent.gameObject.name = UniqueNameID;
+            Instance.gameObject.name = UniqueNameID;
 
-            if (caveIn != null) dungeonEvent.caveIn = caveIn;
-            if (mapTextOverrideKey != "") dungeonEvent.mapTextOverrideKey = mapTextOverrideKey;
-            dungeonEvent.passable = passable;
-            dungeonEvent.itemsToSpawn = itemsToSpawn;
-            if (exitPrefab != null) dungeonEvent.exitPrefab = exitPrefab;
-            if (iconSprite != null) dungeonEvent.GetComponent<SpriteRenderer>().sprite = iconSprite;
-            if (sprites != null) dungeonEvent.sprites = sprites;
-            if (particles != null) dungeonEvent.particles = particles;
-            if (destroyParticles != null) dungeonEvent.destroyParticles = destroyParticles;
-            dungeonEvent.turnsToExpire = turnsToExpire;
-            if (eventProperties != null) dungeonEvent.eventProperties = eventProperties;
-            dungeonEvent.doorNumber = doorNumber;
+            if (caveIn != null) Instance.caveIn = caveIn;
+            if (mapTextOverrideKey != "") Instance.mapTextOverrideKey = mapTextOverrideKey;
+            Instance.passable = passable;
+            Instance.dungeonEventType = dungeonEventType;
+            Instance.itemsToSpawn = itemsToSpawn;
+            if (exitPrefab != null) Instance.exitPrefab = exitPrefab;
+            if (iconSprite != null) Instance.GetComponent<SpriteRenderer>().sprite = iconSprite;
+            if (sprites != null) Instance.sprites = sprites;
+            if (particles != null) Instance.particles = particles;
+            if (destroyParticles != null) Instance.destroyParticles = destroyParticles;
+            Instance.turnsToExpire = turnsToExpire;
+            if (eventProperties != null) Instance.eventProperties = eventProperties;
+            Instance.doorNumber = doorNumber;
 
-            dungeonEvent.gameObject.tag = dungeonEventOrig.gameObject.tag;
+            Prefab.transform.SetParent(Main.Hider.transform);
+            Modify(ref Instance);
         }
+
+        public virtual void Modify(ref DungeonEvent dungeonEventInstance) { }
     }
 }

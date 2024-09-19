@@ -32,7 +32,11 @@ namespace MagmaCore.Utils
             CustomBase.CustomsByType.TryGetValue(typeof(T), out var result);
             return result;
         }
-
+        public static T GetCastedCustom<T>() where T : CustomBase
+        {
+            CustomBase.CustomsByType.TryGetValue(typeof(T), out var result);
+            return result as T;
+        }
         public static T GetCastedCustom<T>(string modID, string name) where T : CustomBase
         {
             return (T)GetCustom(modID, name);

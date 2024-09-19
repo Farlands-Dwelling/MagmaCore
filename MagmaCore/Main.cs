@@ -18,6 +18,7 @@ namespace MagmaCore
         public static readonly List<Character> Characters = new List<Character>();
         public static List<MonoBehaviour> ManagerTypes = new List<MonoBehaviour>();
         public static List<Component> Managers = new List<Component>();
+        public static GameObject Hider;
         public static readonly int ExtraItemFunctionNum = 555; //TODO: placeholder, should definitely find a better way than using numbers in jsons
 
         public override void OnInitializeMagma()
@@ -29,6 +30,10 @@ namespace MagmaCore
 
         public override void OnFirstMainMenuLoad()
         {
+            Hider = new GameObject("MagmaHider");
+            Hider.SetActive(false);
+            GameObject.DontDestroyOnLoad(Hider);
+
             foreach (CustomBase custom in CustomBase.Customs.Values)
             {
                 if (!custom.UniqueConversionMethod)
