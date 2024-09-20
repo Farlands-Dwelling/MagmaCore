@@ -541,6 +541,7 @@
     <Compile Include="Customs\CustomActionButton.cs" />
     <Compile Include="Customs\CustomBase.cs" />
     <Compile Include="Customs\CustomCharacter.cs" />
+    <Compile Include="Customs\CustomChest.cs" />
     <Compile Include="Customs\CustomDungeonEvent.cs" />
     <Compile Include="Customs\CustomDungeonEventSpawn.cs" />
     <Compile Include="Customs\CustomEvent.cs" />
@@ -561,6 +562,7 @@
     <Compile Include="Patches\FixBagSpritesPatch.cs" />
     <Compile Include="Patches\LoadModItemPatch.cs" />
     <Compile Include="Patches\ModsFinishedLoadingPatch.cs" />
+    <Compile Include="Patches\OpenChestPatch.cs" />
     <Compile Include="Patches\SetCharacterFromNumberPatch.cs" />
     <Compile Include="Patches\SetNumberFromCharacterPatch.cs" />
     <Compile Include="Patches\CharacterManagerPatches.cs" />

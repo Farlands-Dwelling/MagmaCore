@@ -18,6 +18,9 @@ namespace MagmaCore.Customs
         public virtual string mapTextOverrideKey { get; protected set; } = "";
         public virtual bool passable { get; protected set; } = true;
         public virtual DungeonEvent.DungeonEventType dungeonEventType { get; protected set; } = DungeonEvent.DungeonEventType.Chance;
+        /// <value>
+        /// Determines what is spawned on the tile for this event. eg. Chest prefab
+        /// </value>
         public virtual List<GameObject> itemsToSpawn { get; protected set; } = new List<GameObject>();
         public virtual GameObject exitPrefab { get; protected set; }
         public virtual Sprite iconSprite { get; protected set; }
