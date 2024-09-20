@@ -545,6 +545,7 @@
     <Compile Include="Customs\CustomDungeonEvent.cs" />
     <Compile Include="Customs\CustomDungeonEventSpawn.cs" />
     <Compile Include="Customs\CustomEvent.cs" />
+    <Compile Include="Customs\CustomEventNPC.cs" />
     <Compile Include="Customs\CustomSkin.cs" />
     <Compile Include="Customs\GetES3AssembliesPatch.cs" />
     <Compile Include="Managers\CustomCharacterManager.cs" />
