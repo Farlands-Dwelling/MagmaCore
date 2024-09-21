@@ -544,8 +544,10 @@
     <Compile Include="Customs\CustomChest.cs" />
     <Compile Include="Customs\CustomDungeonEvent.cs" />
     <Compile Include="Customs\CustomDungeonEventSpawn.cs" />
-    <Compile Include="Customs\CustomEvent.cs" />
+    <Compile Include="Customs\CustomEventEncounter.cs" />
+    <Compile Include="Customs\CustomEventButton.cs" />
     <Compile Include="Customs\CustomEventNPC.cs" />
+    <Compile Include="Customs\CustomRandomEventMaster.cs" />
     <Compile Include="Customs\CustomSkin.cs" />
     <Compile Include="Customs\GetES3AssembliesPatch.cs" />
     <Compile Include="Managers\CustomCharacterManager.cs" />
@@ -561,6 +563,7 @@
     <Compile Include="Patches\ContextMenuTypePatch.cs" />
     <Compile Include="Patches\CreateButtonPatch.cs" />
     <Compile Include="Patches\FixBagSpritesPatch.cs" />
+    <Compile Include="Patches\FullEffectPatch.cs" />
     <Compile Include="Patches\LoadModItemPatch.cs" />
     <Compile Include="Patches\ModsFinishedLoadingPatch.cs" />
     <Compile Include="Patches\OpenChestPatch.cs" />

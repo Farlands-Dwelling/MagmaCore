@@ -36,7 +36,7 @@ namespace MagmaCore
 
             foreach (CustomBase custom in CustomBase.Customs.Values)
             {
-                if (!custom.UniqueConversionMethod)
+                if (!custom.UniqueConversionMethod && !custom.ConvertOnGameLoad)
                     custom.Convert();
             }
         }
@@ -49,6 +49,11 @@ namespace MagmaCore
                 foreach (MonoBehaviour manager in ManagerTypes)
                 {
                     Managers.Add(GameObject.FindObjectOfType<GameManager>().gameObject.AddComponent(manager.GetType()));
+                }
+                foreach (CustomBase custom in CustomBase.Customs.Values)
+                {
+                    if (custom.ConvertOnGameLoad)
+                        custom.Convert();
                 }
             }
         }

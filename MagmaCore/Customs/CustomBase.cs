@@ -25,6 +25,7 @@ namespace MagmaCore.Customs
         public virtual int ID { get; internal set; }
         public abstract string UniqueNameID { get; }
         public virtual bool UniqueConversionMethod { get; internal set; } = false;
+        public virtual bool ConvertOnGameLoad { get; internal set; } = false;
 
         public string ModID = "";
         public string ModName = "";

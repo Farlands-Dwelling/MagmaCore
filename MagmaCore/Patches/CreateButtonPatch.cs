@@ -27,6 +27,7 @@ namespace MagmaCore.Patches
                     gameObject.GetComponent<ReplacementText>().key = actionButton.ID.ToString();
                     gameObject.GetComponentInChildren<SimpleHoverText>().SetText(actionButton.ID.ToString() + "hover");
                     gameObject.GetComponent<Button>().onClick.AddListener(new UnityAction(actionButton.OnClick));
+                    actionButton.ButtonInstance = gameObject.GetComponent<Button>();
                     __instance.numberOfCombatButtons++;
 
                     __result = gameObject;
