@@ -5,15 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace MagmaCore.Customs
 {
+    public struct PossibleOutcomeWithAction
+    {
+        public UnityAction OnClick;
+        public EventButton.PossibleOutcome possibleOutcome;
+
+        public PossibleOutcomeWithAction(EventButton.PossibleOutcome possibleOutcome, UnityAction OnClick)
+        {
+            this.possibleOutcome = possibleOutcome;
+            this.OnClick = OnClick;
+        }
+    }
     public abstract class CustomEventButton : CustomBase
     {
         public EventButton Instance;
         public virtual string buttonText { get; private set; }
-        public virtual List<EventButton.PossibleOutcome> possibleOutcomes { get; private set; }
+        public virtual List<PossibleOutcomeWithAction> possibleOutcomes { get; private set; }
         public virtual bool skippable { get; private set; }
         public virtual GameObject requiredItem { get; private set; }
         public virtual List<Item2.Rarity> requiredRarities { get; private set; }
@@ -34,7 +46,9 @@ namespace MagmaCore.Customs
             Instance.name = UniqueNameID;
             Instance.buttonText = buttonText;
             if (possibleOutcomes != null)
-                Instance.possibleOutcomes = possibleOutcomes.ToArray();
+            {
+                Instance.possibleOutcomes = possibleOutcomes.Select(x => x.possibleOutcome).ToArray();
+            }                
             Instance.skippable = skippable;
             Instance.requiredItem = requiredItem;
             Instance.requiredRarities = requiredRarities;
@@ -46,8 +60,6 @@ namespace MagmaCore.Customs
             Instance.onlyGiveValidItems = onlyGiveValidItems;
             Instance.specialItemToSpawn = specialItemToSpawn;
 
-            Instance.overrideButtonTextKey = TranslationUtils.GetOrCreateTranslation("english", GetHash().ToString(), buttonText).Key;
-
             if (randomEventMaster != null)
             {
                 Instance.randomEventMaster = randomEventMaster;
@@ -55,15 +67,15 @@ namespace MagmaCore.Customs
 
             Instance.transform.SetParent(Main.Hider.transform);
         }
-        public virtual void OnClick()
-        {/*
+        /*public virtual void OnClick()
+        {*//*
             foreach (EventButton.EventButtonAction eventButtonAction in Instance.chosenOutCome.eventButtonActions)
             {
                 if (eventButtonAction.action == (EventButton.EventButtonAction.Action)StringUtils.GetInt32HashCode("Lalalala"))
                 {
                 }
             }
-        */
-        }
+        *//*
+        }*/
     }
 }

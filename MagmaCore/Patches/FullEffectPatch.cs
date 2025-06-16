@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using UnityEngine.Events;
 using UnityEngine;
 using HarmonyLib;
+using MelonLoader;
 
 namespace MagmaCore.Patches
 {
@@ -16,11 +17,18 @@ namespace MagmaCore.Patches
     {
         static void Postfix(ref EventButton __instance, DungeonEvent dungeonEvent)
         {
+            MelonLogger.Msg(" ----- Heya ------ ");
             foreach (CustomEventButton customEventButton in CustomUtils.GetCustomsOfType<CustomEventButton>())
             {
-                if (customEventButton.Instance == __instance)
+                MelonLogger.Msg(" ----- 1 ------ ");
+                foreach (PossibleOutcomeWithAction possibleOutcomeWithAction in customEventButton.possibleOutcomes)
                 {
-                    customEventButton.OnClick();
+                    MelonLogger.Msg(" ----- 2 ------ ");
+                    if (possibleOutcomeWithAction.possibleOutcome == __instance.chosenOutCome)
+                    {
+                        MelonLogger.Msg(" ----- 3 ------ ");
+                        possibleOutcomeWithAction.OnClick?.Invoke();
+                    }
                 }
             }
         }

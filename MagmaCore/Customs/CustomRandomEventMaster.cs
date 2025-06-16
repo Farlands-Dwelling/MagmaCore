@@ -26,16 +26,27 @@ namespace MagmaCore.Customs
             RandomEventMaster result = GameObject.Instantiate(eventMaster.gameObject).GetComponent<RandomEventMaster>();
             Instance = result;
             Instance.name = UniqueNameID;
+            Instance.eventTextKey = GetHash().ToString();
 
             foreach (Transform child in Instance.buttons.transform)
             {
                 GameObject.Destroy(child.gameObject);
             }
-            foreach (EventButton eventButton in eventButtons)
+            for (int i = 0; i < eventButtons.Count; i++)
             {
+                EventButton eventButton = eventButtons[i];
                 GameObject buttonGO = GameObject.Instantiate(eventButton.gameObject);
                 buttonGO.transform.SetParent(Instance.buttons.transform);
-                //TranslationUtils.CreateTranslation("english", Instance.eventTextKey + "b" + i, eventButton.buttonText);
+                // Possible outcome flavor text translations
+                if (eventButton.buttonText != null)
+                    eventButton.overrideButtonTextKey = TranslationUtils.GetOrCreateTranslation("english", Instance.eventTextKey + "b" + (i + 1), eventButton.buttonText).Key;
+
+                for (int j = 0; j < eventButton.possibleOutcomes.Length; j++)
+                {
+                    PossibleOutcome po = eventButton.possibleOutcomes[j];
+                    if (po.flavorText != null)
+                        TranslationUtils.CreateTranslation("english", Instance.eventTextKey + "b" + (i + 1) + "o" + (j + 1), po.flavorText);
+                }
             }
 
             Instance.transform.SetParent(Main.Hider.transform);
@@ -45,7 +56,6 @@ namespace MagmaCore.Customs
 
         private void CreateTranslations()
         {
-            Instance.eventTextKey = GetHash().ToString();
             TranslationUtils.CreateTranslation("english", Instance.eventTextKey + "n", eventName);
             TranslationUtils.CreateTranslation("english", Instance.eventTextKey + "o1", flavorText);
         }
